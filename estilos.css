@@ -1,16 +1,16 @@
 
 
 body {
-    background-color: lemonchiffon;
+
     font-family: 'Roboto', sans-serif;
 }
 
 .header {
     background-color: white;
     display: grid;
-    grid-template-columns: 10% 10% 10% 50% 10% 5%;
+    grid-template-columns: 5% 25% 30% 10% 5%;
     gap: 5px;
-    grid-template-rows: 60px;
+    grid-template-rows: auto;
     align-items: center ;
     justify-content:space-evenly ;
     justify-items: center;
@@ -29,13 +29,21 @@ body {
     width: 100%;
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
 .home-btn,
 .following-btn {
     color:white;
     background-color: black;
     border-radius: 20px;
     border: 1px solid transparent;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -49,7 +57,7 @@ body {
 .searchbar {
     border: 1px solid transparent;
     background-color: rgba(0, 0, 0, .1);
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight: bold;
     font-size: 18px;
     padding: 10px 20px;
@@ -67,13 +75,144 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    flex-shrink: 0.5;
 
 }
 
 .icons-bell,
 .icons-chat,
 .icons-menu {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+.container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,250px);
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.item {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    height: fit-content;
+
+    
+}
+
+.item img {
+    max-width: 100%;
+
+}
+
+.level-1 {
+    grid-row-end: span 3;
+}
+
+.level-2 {
+    grid-row-end: span 2;
+    
+}
+
+.level-3 {
+    grid-row-end: span 1;
+    
+}
+
+@media screen and (max-width: 768px)
+{
+
+
+.home-btn,
+.following-btn {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+}
+.searchbar {
+    
+    font-size: 12px;
+    padding: 1em 2em;
+    background-image: url(https://img.icons8.com/ios-glyphs/30/000000/search.png);
+    background-size: 1em;
+    max-width: 100%;
+}
+}
+
+@media screen and (max-width: 425px)
+{
+
+    .header {
+        gap: 2px;
+    }
+   .logo {
+            height: 32px;
+            width: 32px;
+        }
+    
+    .searchbar {
+    font-size: 10px;
+    padding: 1em 2em;
+    max-width: 50%;
+
+    }
+
+    .home-btn,
+.following-btn {
+    color: black;
+    background-color: white;
+    font-size: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 50px;
+}
+.icons-bell,
+.icons-chat,
+.icons-menu {
+    width: 18px;
+    height: 18px;
     padding: 5px;
+}
+@media screen and (max-width: 320px)
+{
+
+    .header {
+        background-color: white;
+        display: grid;
+    }
+    .logo {
+        height: 16px;
+        width: 16px;
+        z-index: 3;
+        padding-right: 5px;
+    }
+    .home-btn,
+.following-btn {
+    color: black;
+    background-color: white;
+    font-size: 8px;
+    
+
+}
+.searchbar {
+    font-size: 10px;
+    padding: .5em 1em;
+    max-width: 70%;
+
+    }
+
+    .icons-bell,
+.icons-chat,
+.icons-menu {
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+
+   
+}
 }
